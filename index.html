@@ -89,6 +89,9 @@
     }
     ul.bullets li { margin-bottom: 6px; }
     ul.bullets li:last-child { margin-bottom: 0; }
+    ul.bullets ul.sub { margin-top: 6px; margin-left: 16px; }
+    ul.bullets ul.sub li { padding-left: 16px; text-indent: -16px; }
+    ul.bullets ul.sub li::before { content: "- "; color: var(--muted); }
     .role-meta {
       color: var(--muted);
     }
@@ -119,6 +122,11 @@
 
     <div class="divider">~~~</div>
 
+    <h2>RESEARCH INTERESTS</h2>
+    <div>Trustworthy ML · Reliability gating for autonomous ML systems · ML for SE · On-device deployment of large models.</div>
+
+    <div class="divider">~~~</div>
+
     <h2>EXPERIENCE</h2>
 
     <div class="role">
@@ -131,7 +139,12 @@
       <li>Distributed systems &amp; virtualization: Engineered DIBS, a distributed build system for the Tizen platform, orchestrating Docker Swarm across multiple physical nodes. Introduced Proxmox VE to reduce hardware constraints, improve resource utilization and implemented IaC using Ansible, terraform.</li>
       <li>CI/CD &amp; build optimization: Built automated CI pipelines on GitHub Actions and PMEase QuickBuild for Android and Windows projects. Reduced Android build times ~25% via parallelization; cut CI-related build failures from ~15% to under ~6%.</li>
       <li>Process automation: Built Python tooling to automate the end-to-end release lifecycle — build triggers, testing, metadata parsing, release-note generation, in-store deployment. Reduced release-engineer manual work by ~80%, release time by ~40%, with 0 delayed releases.</li>
-      <li>Research &amp; innovation: Leading two Samsung Advanced Research Fund (Samsung's highly competitive internal research initiative) projects — (1) ML-based build failure classification and iterative error resolution for internal CI; (2) AI-driven video/audio search via text and on-device subtitle/lyric generation in Samsung's file manager.</li>
+      <li>Research &amp; innovation: Leading two Samsung Advanced Research Fund projects (Samsung's highly competitive internal research initiative):
+        <ul class="bullets sub">
+          <li><strong>ML-based build failure classification &amp; iterative error resolution</strong> — a 4-stage pipeline: a lightweight classifier (code-side vs CI-side failure routing), a prompt-generator model, and a fine-tuned coder LLM augmented with GraphRAG over a knowledge graph of historical bug-fix pairs and code structure. Closes the loop with automated PR creation and an iterative proof-build validation cycle.</li>
+          <li><strong>AI-driven on-device multimedia search</strong> — led PoC for in-file-manager video/audio search via on-device speech transcription. Quantized OpenAI's Whisper model for real-time inference within Samsung mobile hardware constraints using TensorFlow Lite; extended to on-device subtitle and lyric generation.</li>
+        </ul>
+      </li>
     </ul>
 
     <div class="divider">~~~</div>
@@ -139,17 +152,26 @@
     <h2>EDUCATION</h2>
     <div>B.Sc., Computer Science and Engineering — Military Institute of Science and Technology</div>
     <div class="role-meta">January 2017 — March 2021 · CGPA 3.30/4.00</div>
+    <div style="margin-top: 10px;"><strong> English proficiency: IELTS 8.5</strong></div>
 
     <div class="divider">~~~</div>
 
     <h2>SKILLS</h2>
     <div class="section">
       <div class="row"><span class="label">PRIMARY:</span>Python, Bash</div>
-      <div class="row"><span class="label">CLOUD:</span>AWS (EC2, RDS, S3, CloudFront, ALB, WAF, Shield, CloudWatch), Docker, Docker Swarm, Ansible, Terraform, Proxmox</div>
+      <div class="row"><span class="label">ML / DL:</span>TensorFlow, TensorFlow Lite, Whisper, model quantization, LLM fine-tuning, GraphRAG / knowledge graphs</div>
+      <div class="row"><span class="label">CLOUD:</span>AWS (EC2, RDS, S3, CloudFront, ALB, WAF, Shield, CloudWatch), Ansible, Terraform, Proxmox VE, Docker, Docker Swarm</div>
       <div class="row"><span class="label">CI/CD:</span>GitHub Actions, PMEase QuickBuild, Jenkins</div>
       <div class="row"><span class="label">DATA:</span>MySQL, Redis, MongoDB</div>
-      <div class="row"><span class="label">ALSO:</span>C, C++, Java</div>
+      <div class="row"><span class="label">ALSO:</span>C, C++, Java, PyTorch</div>
     </div>
+
+    <div class="divider">~~~</div>
+
+    <h2>AWARDS</h2>
+    <ul class="bullets">
+      <li>SRBD Icon — 2022</li>
+    </ul>
 
     <div class="divider">~~~</div>
 
@@ -157,13 +179,6 @@
     <ul class="bullets">
       <li><strong>Difficulty analysis of Sudoku puzzles using human-like solving techniques</strong> — undergrad thesis. Implemented 16 Sudoku solver algorithms across two datasets to study what makes a puzzle hard. Supervised by Abu Wasif, Assistant Professor, CSE, BUET. Python, Pandas, NumPy.</li>
       <li><strong>Bangla book reader for blind people</strong> — given an image of a Bangla text document, the app extracts text, converts it to speech, and reads it aloud. Deep-learning OCR, TensorFlow, text-to-speech.</li>
-    </ul>
-
-    <div class="divider">~~~</div>
-
-    <h2>AWARDS</h2>
-    <ul class="bullets">
-      <li>SRBD Icon of the Month — July–August 2022</li>
     </ul>
   </main>
 </body>
