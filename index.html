@@ -92,6 +92,11 @@
     ul.bullets ul.sub { margin-top: 6px; margin-left: 16px; }
     ul.bullets ul.sub li { padding-left: 16px; text-indent: -16px; }
     ul.bullets ul.sub li::before { content: "- "; color: var(--muted); }
+    .tech {
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 4px;
+    }
     .role-meta {
       color: var(--muted);
     }
@@ -183,10 +188,10 @@
           <li>Designed a traceable architecture exposing every planning, search, retrieval, and note-taking decision to study agent behavior, context management, and orchestration.</li>
           <li>Built deterministic tests for graph routing and tool execution independent of LLM inference, enabling reproducible evaluation of agent workflows.</li>
         </ul>
-        <div style="margin-top: 4px;">Python, LangGraph, LangChain, OpenAI API.</div>
+        <div class="tech">Python, LangGraph, LangChain, OpenAI API.</div>
       </li>
-      <li><strong>Difficulty analysis of Sudoku puzzles using human-like solving techniques</strong> — undergrad thesis. Implemented 16 Sudoku solver algorithms across two datasets to study what makes a puzzle hard. Python, Pandas, NumPy.</li>
-      <li><strong>Bangla book reader for blind people</strong> — given an image of a Bangla text document, the app extracts text, converts it to speech, and reads it aloud. Deep-learning OCR, TensorFlow, text-to-speech.</li>
+      <li><strong>Difficulty analysis of Sudoku puzzles using human-like solving techniques</strong> — undergrad thesis. Implemented 16 Sudoku solver algorithms across two datasets to study what makes a puzzle hard. <span class="tech">Python, Pandas, NumPy.</span></li>
+      <li><strong>Bangla book reader for blind people</strong> — given an image of a Bangla text document, the app extracts text, converts it to speech, and reads it aloud. <span class="tech">Deep-learning OCR, TensorFlow, text-to-speech.</span></li>
     </ul>
   </main>
 </body>
